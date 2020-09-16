@@ -1,0 +1,46 @@
+
+DIV R0,R1  // Calcule R0/R1 et met le résultat dans R2
+
+Détail des autres variables 
+
+R3 (le résultat R0 qu'on cherche a retrouver)
+R4 () 
+R5 
+
+
+
+MOV R3,R1
+MOV R2,#1
+CMP R0,R3
+BNINF NEXT
+MOV R2,#0
+B FIN
+NEXT
+LSL R3,#1
+LSL R2,#1
+CMP R0,R3
+BNINF NEXTBIS
+MOV R2,#1
+B FIN
+NEXTBIS
+LSL R3,#1
+LSL R2,#1
+MOV R4,#1
+MOV R5,R1
+CMP R0,R3
+BNINF BIGRES
+SUB R2,#1
+SUB R3,R5
+CMP R0,R3
+BNINF TROIS 
+MOV R2,#2
+B FIN
+TROIS MOV R2,#3
+B FIN
+
+
+
+
+
+
+
