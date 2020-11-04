@@ -37,6 +37,7 @@ MOV R2,#2
 B FIN
 TROIS MOV R2,#3
 B FIN
+FIN
 
 
 
